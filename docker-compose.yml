@@ -4,8 +4,6 @@ services:
   freescout-app:
     image: tiredofit/freescout
     container_name: freescout-app
-    depends_on:
-      - freescout-db
     ports:
     - 80:80
     links:
@@ -31,7 +29,8 @@ services:
     - ADMIN_PASS=${freescout-adminpass}
     - ENABLE_SSL_PROXY=FALSE
     - DISPLAY_ERRORS=FALSE
-    - TIMEZONE=Denmark/Copenhagen
+    - TIMEZONE=Europe/Copenhagen
+    
     restart: unless-stopped
 
   freescout-db:
