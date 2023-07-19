@@ -5,7 +5,7 @@ services:
     image: tiredofit/freescout
     container_name: freescout-app
     ports:
-    - 8080:80
+    - 80:80
     links:
     - freescout-db
     volumes:
